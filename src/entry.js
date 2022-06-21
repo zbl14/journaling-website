@@ -1,4 +1,4 @@
-export function Entry (title, body) {
+function Entry (title, body) {
   this.title = title;
   this.body = body
 }
@@ -26,7 +26,19 @@ Entry.prototype.wordCounter = function(text) {
   return wordCount;
 }
 
+Entry.prototype.vowelsCounter = function(text) {
+  let vowels = ["a", "e", "i", "o", "u"]  
+  let newArray = [];
+  let textArray = text.split("");
+  for (let i=0; i < textArray.length; i++) {
+    if (vowels.includes(textArray[i])) {
+       newArray.push(textArray[i]);
+    } 
+  }
+  return newArray.length;
+} 
+
 let title = "What a wonderful day!";
 let body = "Hello, What a wonderful day!";
 let entry1 = new Entry (title, body);
-entry1.wordCounter(entry1.body)
+// entry1.wordCounter(entry1.body)
