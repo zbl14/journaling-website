@@ -38,6 +38,28 @@ Entry.prototype.vowelsCounter = function(text) {
   return newArray.length;
 } 
 
+// function countVowel(str) { 
+//   const numofVowel = str.match(/[aeiou]/gi).length;
+//   return numofVowel;
+// }
+
+Entry.prototype.consonantCounter = function(text) {
+  const numofConsonants = text.match(/(?![aeiou])[a-z]/gi).length;
+  return numofConsonants;
+}
+
+Entry.prototype.consCounter = function(text) {
+  let cons = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]  
+  let newArray = [];
+  let textArray = text.split("");
+  for (let i=0; i < textArray.length; i++) {
+    if (cons.includes(textArray[i])) {
+       newArray.push(textArray[i]);
+    } 
+  }
+  return newArray.length;
+} 
+
 let title = "What a wonderful day!";
 let body = "Hello, What a wonderful day!";
 let entry1 = new Entry (title, body);
