@@ -26,7 +26,7 @@ Entry.prototype.wordCounter = function(text) {
   return wordCount;
 };
 
-Entry.function.vowelCounter = function(text) { 
+Entry.prototype.vowelCounter = function(text) { 
   const numofVowels = text.match(/[aeiou]/gi).length;
   return numofVowels;
 };
@@ -37,10 +37,10 @@ Entry.prototype.consonantCounter = function(text) {
 };
 
 
-let title = "What a wonderful day!";
-let body = "Hello, What a wonderful day!";
-let entry1 = new Entry (title, body);
-entry1.wordCounter(entry1.body)
+// let title = "What a wonderful day!";
+// let body = "Hello, What a wonderful day!";
+// let entry1 = new Entry (title, body);
+// entry1.wordCounter(entry1.body);
 
 // Entry.prototype.vowelsCounter = function(text) {
 //   let vowels = ["a", "e", "i", "o", "u"];  
