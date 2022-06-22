@@ -8,12 +8,12 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  devtool: 'eval-source-map',  
+  devtool: 'eval-source-map',
   devServer: {
     contentBase: './dist'
   },
   plugins: [
-    new CleanWebpackPlugin(), 
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Journaling Website',
       template: './src/index.html',
@@ -30,8 +30,8 @@ module.exports = {
         ]
       },
       {
-        test: /\.js$/i,
-        exclude: /node_modules/,
+        test: /\.js$/,
+        exclude: /node_modules/i,
         loader: "eslint-loader"
       }
     ]
