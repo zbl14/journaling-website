@@ -1,4 +1,10 @@
-p {
-  color: blue;
-  font-size: 100px;
+.jumbotron {
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+  background-color: var(--bs-light);
+  border-radius: .3rem;  
+}
+
+h1 {
+  text-align: center;
 }
