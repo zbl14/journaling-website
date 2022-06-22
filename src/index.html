@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <title>Journaling Website</title>
 </head>
-<body>
-  <form id="title">
-    <label>
-      <input type="text" id="title">
-    </label>
+<header class="jumbotron">
+  <h1>Journaling</h1>
+</header>
+<body class="container">
+  <form id="entry">
+    <div class="form-group">
+      <label for="journalTitle">Journal Title</label>
+      <input id="journalTitle" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+      <label for="journalBody">Journal Body</label>
+      <input id="journalBody" class="form-control" type="text">
+    </div>
   </form>
-
-  <form id="body">
-    <label>
-      <input type="text" id="body">
-    </label>
-  </form>
-  <button type="submit"> Submit </button>
-  <p></p>
-
+  <br>
+  <button type="submit" class="btn btn-primary"> Submit </button>
+  <div id="conclusion">
+    <ul id="response"></ul>
+  </div>
 </body>
 </html>
